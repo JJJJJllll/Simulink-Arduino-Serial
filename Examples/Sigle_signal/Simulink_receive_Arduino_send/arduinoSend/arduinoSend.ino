@@ -9,10 +9,11 @@ FLOATUNION_t myValue;
 
 void setup() {
   // initialize serial, use the same boudrate in the Simulink Config block
-  Serial.begin(115200);
+  Serial.begin(9600);
 
 }
 void loop(){
+  myValue.number = 1000; // 手动给个定值
   myValue.number = sin(((float) millis()/1000)); // Give your float a value
   
   // Print header: Important to avoid sync errors!
@@ -26,5 +27,5 @@ void loop(){
   Serial.print('\n');
   
   // Use the same delay in the Serial Receive block
-  delay(50);
+  delay(10);
 }

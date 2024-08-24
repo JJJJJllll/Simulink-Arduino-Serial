@@ -9,7 +9,7 @@ FLOATUNION_t myValue;
 
 void setup() {
   // initialize serial, use the same boudrate in the Simulink Config block
-  Serial.begin(115200);
+  Serial.begin(9600);
 
 }
 void loop(){
